@@ -57,5 +57,14 @@
 </div>
 
 <script src="script.js"></script>
-</body>
+</body>async function register() {
+  await fetch("https://твоя-ссылка.onrender.com/register", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      username: "test",
+      password: "123456"
+    })
+  });
+}
 </html>
