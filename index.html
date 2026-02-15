@@ -67,4 +67,43 @@
     })
   });
 }
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  const registerBtn = document.getElementById("registerBtn");
+  const loginBtn = document.getElementById("loginBtn");
+
+  if (registerBtn) {
+    registerBtn.addEventListener("click", function() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      if (!username || !password) {
+        alert("Заполни все поля");
+        return;
+      }
+
+      localStorage.setItem("user", JSON.stringify({ username, password }));
+      alert("Регистрация успешна!");
+    });
+  }
+
+  if (loginBtn) {
+    loginBtn.addEventListener("click", function() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      const saved = JSON.parse(localStorage.getItem("user"));
+
+      if (!saved || saved.username !== username || saved.password !== password) {
+        alert("Неверные данные");
+        return;
+      }
+
+      alert("Вход выполнен!");
+    });
+  }
+
+});
+</script>
 </html>
