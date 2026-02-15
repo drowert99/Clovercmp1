@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Клевер</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">🍀 Клевер</div>
+  <div class="search">
+    <input type="text" placeholder="Поиск">
+  </div>
+  <div class="profile-mini">
+    <img src="https://i.pravatar.cc/40" alt="">
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="sidebar glass">
+    <nav>
+      <a href="#">🏠 Главная</a>
+      <a href="#">📰 Новости</a>
+      <a href="#">💬 Сообщения</a>
+      <a href="#">👥 Друзья</a>
+      <a href="#">📷 Фото</a>
+      <a href="#">⚙ Настройки</a>
+    </nav>
+  </aside>
+
+  <main class="feed">
+    <div class="create-post glass">
+      <img src="https://i.pravatar.cc/45" alt="">
+      <input type="text" id="postInput" placeholder="Что нового?">
+      <button onclick="addPost()">Опубликовать</button>
+    </div>
+
+    <div id="posts"></div>
+  </main>
+
+  <aside class="rightbar glass">
+    <h3>Онлайн</h3>
+    <div class="friend">
+      <img src="https://i.pravatar.cc/30?img=1"> Иван
+    </div>
+    <div class="friend">
+      <img src="https://i.pravatar.cc/30?img=2"> Мария
+    </div>
+    <div class="friend">
+      <img src="https://i.pravatar.cc/30?img=3"> Алексей
+    </div>
+  </aside>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
